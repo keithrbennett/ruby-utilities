@@ -1,4 +1,4 @@
-http://gist.github.com/77823# Bidirectional Hash
+# Bidirectional Hash
 
 class BiHash
 
@@ -36,9 +36,17 @@ def get_all_rights
   @r2l.keys
 end
 
+end
 
-a_hash =  { :color => :yellow, :flavor => :vanilla }
-bh = BiHash.new a_hash
-puts bh.get_right :color
-puts bh.get_left :yellow
+def test
+  a_hash =  { :color => :yellow, :flavor => :vanilla }
+  bh = BiHash.new a_hash
+  puts bh.get_right :color
+  puts bh.get_left :yellow
+
+  puts "Lefts:"
+  puts bh.get_all_lefts
+  puts "Rights:"
+  puts bh.get_all_rights
+end
 
