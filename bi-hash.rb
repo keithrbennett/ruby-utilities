@@ -1,4 +1,4 @@
-# Bidirectional Hash
+http://gist.github.com/77823# Bidirectional Hash
 
 class BiHash
 
@@ -26,7 +26,16 @@ def get_left(right)
   @r2l[right]
 end
 
+
+def get_all_lefts
+  @l2r.keys
 end
+
+
+def get_all_rights
+  @r2l.keys
+end
+
 
 a_hash =  { :color => :yellow, :flavor => :vanilla }
 bh = BiHash.new a_hash
