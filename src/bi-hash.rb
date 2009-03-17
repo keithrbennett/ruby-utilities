@@ -7,15 +7,15 @@ end
 
 class UniquenessViolationException < Exception
 
-  :attr_accessor value_in_violation
+  attr_accessor :value_in_violation
 
   def initialize(value_in_violation = nil)
     self.value_in_violation = violation
   end
 
   def to_s
-    (value_in_violation = nil) 
-        ? "UniquenessViolationException" 
+    (value_in_violation == nil) \
+        ? "UniquenessViolationException" \
         : "UniquenessViolationException for value #{value_in_violation}."
   end
 end
@@ -64,9 +64,6 @@ class BiHash
     @r2l.keys
   end
 
-
-  def remove_left(obj)
-    @l2r.
 end
 
 
@@ -83,3 +80,4 @@ def test
   puts bh.get_all_rights
 end
 
+test
